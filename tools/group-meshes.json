@@ -1,0 +1,20 @@
+{
+  "chest-upper": ["Clavicular head of pectoralis major muscle"],
+  "chest-mid": ["Sternocostal head of pectoralis major muscle"],
+  "chest-lower": ["(Abdominal part of pectoralis major muscle)"],
+  "lats": ["Latissimus dorsi muscle"],
+  "upper-back": ["Infraspinatus muscle", "Teres major muscle", "Teres minor muscle", "Rhomboid major muscle", "Rhomboid minor muscle"],
+  "traps": ["Descending part of trapezius muscle", "Transverse part of trapezius muscle", "Ascending part of trapezius muscle"],
+  "delt-front": ["Clavicular part of deltoid muscle"],
+  "delt-side": ["Acromial part of deltoid muscle"],
+  "delt-rear": ["Scapular spinal part of deltoid muscle"],
+  "biceps": ["Long head of biceps brachii", "Short head of biceps brachii"],
+  "triceps": ["Long head of triceps brachii", "Lateral head of triceps brachii", "Medial head of triceps brachii"],
+  "abs": ["Rectus abdominis muscle"],
+  "obliques": ["External abdominal oblique muscle"],
+  "erectors": ["Iliocostalis lumborum muscle", "Iliocostalis thoracis muscle", "Longissimus thoracis muscle", "Spinalis thoracis muscle"],
+  "glutes": ["Gluteus maximus muscle"],
+  "quads": ["Rectus femoris muscle", "Vastus lateralis muscle", "Vastus medialis muscle", "Vastus intermedius muscle"],
+  "hamstrings": ["Long head of biceps femoris", "Short head of biceps femoris", "Semitendinosus muscle", "Semimembranosus muscle"],
+  "calves": ["Lateral head of gastrocnemius", "Medial head of gastrocnemius", "Soleus muscle"]
+}

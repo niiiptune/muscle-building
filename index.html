@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strength session</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">Session planner</p>
+      <h1>Strength session</h1>
+      <p class="lede">Pick the muscles for a session, check the equipment you have, and get the movements and warm-up for all of them.</p>
+    </header>
+    <main>
+      <section class="stage" aria-label="Body map">
+        <div class="view-switch" role="group" aria-label="Body view">
+          <button type="button" data-show="front" aria-pressed="true">Front</button>
+          <button type="button" data-show="back" aria-pressed="false">Back</button>
+        </div>
+        <div class="figures" data-showing="front">
+          <figure class="figure figure-front" data-view="front">
+            <div class="body-map" data-view="front" role="group" aria-label="Front of the body">
+              <img src="assets/body-front.webp" alt="" width="800" height="1600">
+              <canvas aria-hidden="true"></canvas>
+            </div>
+            <figcaption>Front</figcaption>
+          </figure>
+          <figure class="figure figure-back" data-view="back">
+            <div class="body-map" data-view="back" role="group" aria-label="Back of the body">
+              <img src="assets/body-back.webp" alt="" width="800" height="1600">
+              <canvas aria-hidden="true"></canvas>
+            </div>
+            <figcaption>Back</figcaption>
+          </figure>
+        </div>
+        <p class="credit">Figure rendered from <a href="https://www.z-anatomy.com/">Z-Anatomy</a> (CC BY-SA 4.0), based on <a href="https://lifesciencedb.jp/bp3d/">BodyParts3D</a> (CC BY-SA 2.1 JP). See <a href="LICENSE-ASSETS.md">LICENSE-ASSETS.md</a>.</p>
+      </section>
+
+      <div class="panel">
+        <div class="selection">
+          <h2 id="selection-title">Choose muscles</h2>
+          <p id="selection-note">Tap the muscles for this session, or start with a region. Three or four is a full session.</p>
+          <div id="session" hidden></div>
+          <div id="regions"></div>
+          <div id="groups" hidden></div>
+        </div>
+        <fieldset id="equipment"></fieldset>
+        <section id="movements" aria-live="polite"></section>
+        <section id="today"></section>
+        <section id="warmup" aria-live="polite"></section>
+      </div>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="figure-masks.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
