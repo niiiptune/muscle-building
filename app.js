@@ -471,7 +471,14 @@ function movementCard(movement) {
     : [];
   return el("article", { class: "card", "data-movement": movement.id }, [
     el("div", { class: "card-top" }, [
-      el("h3", {}, [movement.name]),
+      el("h3", {}, [
+        el("button", {
+          type: "button",
+          class: "name-button",
+          "aria-haspopup": "dialog",
+          onclick: (event) => openDemo(movement, event.currentTarget),
+        }, [movement.name]),
+      ]),
       el("button", {
         type: "button",
         class: added ? "text-button is-added" : "text-button",
@@ -529,6 +536,40 @@ function renderWarmup() {
     ]));
   }
   host.append(list);
+}
+
+let demoOpener = null;
+
+function openDemo(movement, opener) {
+  const dialog = document.querySelector("#demo");
+  const slug = DEMOS[movement.id];
+  document.querySelector("#demo-title").textContent = movement.name;
+  document.querySelector("#demo-setup").textContent = movement.setup;
+  const frames = dialog.querySelectorAll(".demo-frame");
+  frames[0].src = `assets/demos/${slug}-0.webp`;
+  frames[1].src = `assets/demos/${slug}-1.webp`;
+  demoOpener = opener;
+  if (!dialog.open) dialog.showModal();
+  requestAnimationFrame(() => dialog.classList.add("is-shown"));
+}
+
+function closeDemo() {
+  const dialog = document.querySelector("#demo");
+  dialog.classList.remove("is-shown");
+  dialog.close();
+  if (demoOpener) demoOpener.focus();
+}
+
+function bindDemo() {
+  const dialog = document.querySelector("#demo");
+  document.querySelector("#demo-close").addEventListener("click", closeDemo);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeDemo();
+  });
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeDemo();
+  });
 }
 
 function toggleToday(movementId) {
@@ -594,6 +635,7 @@ function reportMissingShapes() {
 }
 
 labelMuscles();
+bindDemo();
 bindFigure();
 bindViews();
 renderEquipment();

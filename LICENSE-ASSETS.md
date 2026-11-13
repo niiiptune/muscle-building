@@ -11,3 +11,7 @@ reduced to a per-pixel muscle-group mask. The abdominal-wall aponeuroses are cut
 they cover the rectus abdominis, in the mask only. `tools/build-figure.sh` reproduces both.
 
 These files are shared under CC BY-SA 4.0. The rest of the project is not covered by this notice.
+
+## Movement photos
+
+`assets/demos/` holds two frames of each movement, from the [Free Exercise DB](https://github.com/yuhonas/free-exercise-db) by Nathan Clark, dedicated to the public domain under the Unlicense. The page crossfades the two frames.

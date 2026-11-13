@@ -53,8 +53,23 @@
       </div>
     </main>
   </div>
+  <dialog id="demo" class="demo" aria-labelledby="demo-title">
+    <div class="demo-stage">
+      <img class="demo-frame" alt="">
+      <img class="demo-frame demo-frame-end" alt="">
+    </div>
+    <div class="demo-body">
+      <div class="demo-top">
+        <h2 id="demo-title"></h2>
+        <button type="button" class="text-button" id="demo-close">Close</button>
+      </div>
+      <p id="demo-setup"></p>
+      <p class="credit">Photos from the <a href="https://github.com/yuhonas/free-exercise-db">Free Exercise DB</a>, public domain. The two frames crossfade so the rep reads as motion.</p>
+    </div>
+  </dialog>
   <script src="data.js"></script>
   <script src="figure-masks.js"></script>
+  <script src="demos.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
